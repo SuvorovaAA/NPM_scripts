@@ -1,3 +1,4 @@
+import json
 import argparse
 import os
 import subprocess
@@ -10,10 +11,22 @@ parser = argparse.ArgumentParser(
     """)
 
 parser.add_argument('id', help='assembly ID')
-parser.add_argument('-orgn_name', help='Organism name that will be used to name folders for easier navigation')
+parser.add_argument('-orgn_name', help='Organism name that will be used to refer to the assembly and to name folders for easier navigation.')
 parser.add_argument('-quiet', action='store_true', help='Hide progress bars')
 
 args = parser.parse_args()
+
+if not os.path.exists("name_2_id.json"):
+    open("name_2_id.json", 'w').close()
+    loaded_dict = {}
+else:
+    with open("name_2_id.json", "r") as file:
+        loaded_dict = json.load(file)
+
+loaded_dict[args.orgn_name] = args.id
+
+with open("name_2_id.json", "w") as file:
+    json.dump(loaded_dict, file, indent=4)
 
 if not os.path.isdir('../data'):
     subprocess.check_output(['mkdir', '../data'])
