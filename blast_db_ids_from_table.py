@@ -30,7 +30,7 @@ for index, row in tqdm(df.iterrows()):
     subprocess.check_output(command.split())
     path = f'../blast_results/{orgn_name}'
     filename = f'{path}/{orgn_id}_{"blastp" if args.db == "prot" else "tblastn"}_res.tsv'
-    out_file = f'{path}/unique_{"blastp" if args.db == "prot" else "tblastn"}_res.tsv'
+    out_file = f'{path}/unique_{"blastp" if args.db == "prot" else "tblastn"}_res.faa'
     proteome = f'../data/{orgn_name}/ncbi_dataset/data/{orgn_id}/protein.faa'
 
     cut_process = subprocess.Popen(f'cut -f2 {filename}'.split(), stdout=subprocess.PIPE, text=True)
