@@ -42,7 +42,7 @@ for index, row in tqdm(df.iterrows()):
     output = uniq_process.stdout.read()
     uniq_process.stdout.close()
 
-    summary.append([orgn_name, str(len(output.split()) + 1)])
+    summary.append([orgn_name, str(len(output.split()))])
 
     ids = output.split()
     with open(out_file, 'w') as out:
