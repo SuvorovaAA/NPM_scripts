@@ -1,0 +1,8 @@
+Clade_1	Clade_2	Species	Common_name	Scaffold N50	Assembly level	Number of chromosomes	NCBI id
+Viridiplantae	Chlorophyta	Chlamydomonas reinhardtii	хламидомонада	7.8M	chromosome	17	GCF_000002595.2
+Viridiplantae	Magnoliophyta	Arabidopsis thaliana	арабидопсис (двудольное)	23.5M	chromosome	5	GCF_000001735.4
+Viridiplantae	Magnoliophyta	Oryza sativa	рис (одноодольное)	31M	complete genome	12	GCF_034140825.1
+Viridiplantae	Gymnospérmae	Cryptomeria japonica	кипарис (голосеменные)	755M	chromosome	11	GCF_030272615.1
+Viridiplantae	Marchantiophyta	Marchantia polymorpha	печеночник	31M	chromosome	9	GCA_037833965.1
+Viridiplantae	Lycophytes	Selaginella moellendorffii 	плаун	1.7M	scaffold	757	GCF_000143415.4
+Viridiplantae	Bryophyta	Physcomitrium patens 	мох	17.4M	chromosome	27	GCF_000002425.4
